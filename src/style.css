@@ -15,3 +15,11 @@
     height: 200px;
     width: 200px;
 }
+/* Estilo Modal*/
+.modalCardsView{
+    background-color: black;
+    width: 200px;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
