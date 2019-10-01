@@ -1,0 +1,17 @@
+/*Estilo de la tarjeta*/
+.cardsMovies{
+    background-color: aquamarine;
+    float: left;
+    width: 310px;
+    height: 310px;
+    text-align: center;
+    margin-top: 10pt;
+    margin-left: 10pt;
+    
+}
+/*Estilo de la imagen*/
+.posterMovie{
+    margin-top: 5pt;
+    height: 200px;
+    width: 200px;
+}
