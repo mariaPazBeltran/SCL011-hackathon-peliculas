@@ -204,3 +204,22 @@ h2{
  margin-left:20%;
 }
 }
+/*Para celular*/
+@media only screen and (max-width: 640px){
+    #showCards{
+      margin: 0px;
+      width:100%;
+}
+#nav{
+  text-align: center;
+  width: 100%;
+  margin-left: 5%
+}
+#main{
+  margin:2px;
+  flex-flow: wrap;
+  text-align: center;
+  height: 80px; 
+  
+}
+}
