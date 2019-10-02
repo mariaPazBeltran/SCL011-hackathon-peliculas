@@ -96,8 +96,7 @@ select {
     display:flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 /*Estilo de la tarjeta*/
 .cardsMovies{
@@ -186,3 +185,20 @@ h2{
     border-radius: 20px;
     border-bottom-left-radius: 0;
 } */
+
+/* Para tablets */
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+    #root{
+    width:100%;
+    margin: 0px;
+}
+
+}
+
+/*Para celular*/
+@media only screen and (max-width: 640px){
+    #root{
+      margin: 0px;
+      width:100%;
+}
+}
