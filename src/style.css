@@ -192,13 +192,15 @@ h2{
     width:100%;
     margin: 0px;
 }
-
+    #main{
+    height: 80px;
+ }
+ #showCards{
+    width:100%;
+    margin: 0px;
 }
-
-/*Para celular*/
-@media only screen and (max-width: 640px){
-    #root{
-      margin: 0px;
-      width:100%;
+#nav{
+    width: 70%;
+ margin-left:20%;
 }
 }

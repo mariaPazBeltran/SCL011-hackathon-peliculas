@@ -26,6 +26,33 @@ Para definir nuestro usuario entrevistamos a 40 personas de un rango etario entr
 Mujer de 20 a 30 años, que ve películas regularmente en Netflix, cine u otra plataforma de internet donde prefiere los géneros de ciencia ficción y comedia.
 
 Utiliza paginas para conocer la información de sus películas favoritas, las que busca regularmente por título de la cinta o su género. Su película favorita es Star Wars y busca que la página de películas muestre el poster de la cinta, la información sea fácil de ver y que sea una página simple. También le gustaría poder acceder a premios dentro de la plataforma y que ésta pueda sugerirle otras películas en función a lo que ya ha buscado en la página.  
+### Historias de Usuario
+  
+
+ - [ ]  Historia de usuario :
+
+“Yo como usuario quiero ver los posters de las películas que tiene la página”
+
+➡ Criterios de aceptación:
+
+Mostramos la data en la pantalla principal.
+
+ - [ ]  Historia de usuario :
+
+“Yo como usuario quiero saber datos de la película”
+
+➡ Criterios de aceptación:
+
+Mostramos en un modal información relacionada con la película, como el director o las nominaciones a premios.
+
+ - [ ]  Historia de usuario :
+
+“Yo como usuario quiero poder buscar por género mi película favorita”
+
+➡ Criterios de aceptación:
+
+Creamos un select que filtre por genero las películas.
+
 ### Test de usabilidad
 Creamos un prototipo basado en las sugerencias de los posibles usuarios den la encuesta, dando como resultado
 ![figma1](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/figma%201.JPG?raw=true)
