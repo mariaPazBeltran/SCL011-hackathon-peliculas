@@ -7,12 +7,11 @@ body {
     font-family: sans-serif;
     font-weight: 400;
     font-size: 16px;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to right top, #3a2f4f, #3e3a61, #3e4573, #3a5286, #2e5f99);
 }
 
 #root{
+    border: 1px solid black;
     width: 100%;
     height: auto;
     margin: 0;
@@ -92,7 +91,7 @@ select {
 
 #showCards{
     width: 90%;
-    margin: 5% 5% 0 5%;
+    margin: 5%;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -130,10 +129,15 @@ h2{
     border:none;
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+    cursor: pointer;
+}
+
+.buttonModal:hover{
+    background-color: #E8BA28;
 }
 
 /* Estilo Modal*/
-.modalCardsView{
+/* .modalCardsView{
     background-color: #583688;
     width: 20%;
     margin: 47px 0 0 -65px;
@@ -174,15 +178,81 @@ h2{
    border:none;
    color: white;
    font-size: 16px;
+} */
+
+
+/* Estilo Modal*/
+
+.modalContainer{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
-/* .modalCardsView{
-    background-color: #583688;
-    width: 22%;
-    margin: -295px 0 0 130px;
-    padding: 20px;
-    color: white;
-    position: absolute;
-    text-align: center;
+
+ .modalCardsView{
+    width: 60%;
+    margin: 0 0 0 16%;
+    padding: 30px 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    overflow: visible;
     border-radius: 20px;
     border-bottom-left-radius: 0;
-} */
+    border-bottom-right-radius: 0;
+    background-color: #583688;
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+   align-items: center;
+} 
+.infoContent{
+    width: 90%;
+    text-align: left;
+}
+
+.infoContent h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.infoContent p{
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.contentBtn{
+    width:20px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.btnExit{
+   background: none;
+   border:none;
+   color: white;
+   font-size: 20px;
+}
+.btnWatchNow{
+
+    width: 20%;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    background-color: #E8BA28;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+    order: -1;
+}

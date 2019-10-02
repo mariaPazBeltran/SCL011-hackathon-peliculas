@@ -1,8 +1,10 @@
-const data = window.movies;
-
-document.getElementById("showCards").innerHTML="";
-
-for (let i = 0; i < data.length; i++) {
+let arrayMovie= [`https://www.omdbapi.com/?i=tt0499549&apikey=597cb02c`, `https://www.omdbapi.com/?i=tt3659388&apikey=597cb02c`]
+for (let i = 0; i < arrayMovie.length; i++) {
+    fetch(arrayMovie[i])
+    .then(response =>{
+        return response.json()})
+        .then(data=>{
+            console.log(data)
         
     let cards =document.createElement("div")
     cards.className = "cardsMovies"
@@ -10,13 +12,17 @@ for (let i = 0; i < data.length; i++) {
     buttonCards.className = "buttonModal"
     buttonCards.innerHTML ="VER"
     
-    cards.innerHTML+= `<img class="posterMovie" src=${data[i].Poster}></img>` + `<h2>${data[i].Title}</h2>`
+    cards.innerHTML+= 
+    `<img class="posterMovie" src=${data.Poster}></img>
+    <h2>${data.Title}</h2>`
     cards.appendChild(buttonCards)
     document.getElementById("showCards").appendChild(cards).innerHTML
 
-    /*** MODAL ***/
+    /* MODAL */
     
     buttonCards.addEventListener('click', ()=>{
+        let modalContainer = document.createElement("div")
+        modalContainer.className="modalContainer"
         let modalCards = document.createElement("div")
         modalCards.className= "modalCardsView"
         let infoContent = document.createElement("div")
@@ -26,27 +32,32 @@ for (let i = 0; i < data.length; i++) {
         let exitModal = document.createElement("button")
         exitModal.className="btnExit"
         exitModal.innerHTML= "X"
+        let buttonWatchNow= document.createElement("button")
+        buttonWatchNow.className = "btnWatchNow"
+        buttonWatchNow.innerHTML= "Ver ahora"
 
         infoContent.innerHTML+= 
-        `<h2>${data[i].Title}</h2> 
-        <p>Año: ${data[i].Year}</p>
-        <p>Duracion: ${data[i].Runtime}</p>
-        <p>Genero: ${data[i].Genre}</p>
-        <p>Director: ${data[i].Director}</p>
-        <p>sinopsis: ${data[i].Plot}</p>`
+        `<h2>${data.Title}</h2> 
+        <p>Año: ${data.Year}</p>
+        <p>Duracion: ${data.Runtime}</p>
+        <p>Genero: ${data.Genre}</p>
+        <p>Director: ${data.Director}</p>
+        <p>sinopsis: ${data.Plot}</p>`
 
-        cards.appendChild(modalCards)
+        cards.appendChild(modalContainer)
+        modalContainer.appendChild(modalCards)
         modalCards.appendChild(infoContent)
         modalCards.appendChild(buttonContent)
+        modalCards.appendChild(buttonWatchNow)
         buttonContent.appendChild(exitModal)
         
 
         exitModal.addEventListener('click', ()=>{
-            modalCards.style.display= "none"
+            modalContainer.style.display= "none"
         })
     })
     document.getElementById("showCards").appendChild(cards).innerHTML
-}
+
 
 let viewCards = (data) => {
     document.getElementById("showCards").innerHTML="";
@@ -58,35 +69,54 @@ let viewCards = (data) => {
         buttonCards.className = "buttonModal"
         buttonCards.innerHTML ="VER"
     
-        cards.innerHTML+= `<img class="posterMovie" src=${data[i].Poster}></img>` + `<h2>${data[i].Title}</h2>`
+        cards.innerHTML+= `<img class="posterMovie" src=${data.Poster}></img>` + `<h2>${data.Title}</h2>`
         cards.appendChild(buttonCards)
         document.getElementById("showCards").appendChild(cards).innerHTML
 
-    /*** MODAL ***/
+    /* MODAL */
         buttonCards.addEventListener('click', ()=>{
+            let modalContainer = document.createElement("div")
+            modalContainer.className="modalContainer"
             let modalCards = document.createElement("div")
             modalCards.className= "modalCardsView"
-            modalCards.innerHTML+= 
-            `<h2>${data[i].Title}</h2>` + `<p>Año: ${data[i].Year}</p>`+ `<p>Duracion: ${data[i].Runtime}</p>` + `<p>Genero: ${data[i].Genre}</p>`+ `<p>Director: ${data[i].Director}</p>` + `<p>sinopsis: ${data[i].Plot}</p>`
+            let infoContent = document.createElement("div")
+            infoContent.className="infoContent"
+            let buttonContent = document.createElement("div")
+            buttonContent.className="contentBtn"
             let exitModal = document.createElement("button")
             exitModal.className="btnExit"
             exitModal.innerHTML= "X"
-            modalCards.appendChild(exitModal)
-            cards.appendChild(modalCards)
-            exitModal.addEventListener('click', ()=>{
-                modalCards.style.display= "none"
-            })
+            let buttonWatchNow= document.createElement("button")
+            buttonWatchNow.className = "btnWatchNow"
+            buttonWatchNow.innerHTML= "Ver ahora"
     
+            infoContent.innerHTML+= 
+            `<h2>${data.Title}</h2> 
+            <p>Año: ${data.Year}</p>
+            <p>Duracion: ${data.Runtime}</p>
+            <p>Genero: ${data.Genre}</p>
+            <p>Director: ${data.Director}</p>
+            <p>sinopsis: ${data.Plot}</p>`
+    
+            cards.appendChild(modalContainer)
+            modalContainer.appendChild(modalCards)
+            modalCards.appendChild(infoContent)
+            modalCards.appendChild(buttonContent)
+            modalCards.appendChild(buttonWatchNow)
+            buttonContent.appendChild(exitModal)
+            
+    
+            exitModal.addEventListener('click', ()=>{
+                modalContainer.style.display= "none"
+            })
         })
         document.getElementById("showCards").appendChild(cards).innerHTML
     }
 }
 
-const selectGender = document.getElementById("gender");
-selectGender.addEventListener("change", () =>{
-    const condition = selectGender.value;
-    let result = genderFilter(data, condition);
-  viewCards(result);
-
-});
-
+    const selectGender = document.getElementById("gender");
+    selectGender.addEventListener("change", () =>{
+        let result = genderFilter(data, selectGender.value);
+        viewCards(result);
+    });
+})}
