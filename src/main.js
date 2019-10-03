@@ -11,6 +11,62 @@ window.data = {
     }
 }
 
+const sessionSci = document.getElementById("userSession");
+    const sendBtnUser = document.getElementById("sendNick")
+    sendBtnUser.addEventListener('click',() =>{
+        let userName = document.getElementById("nickName").value;
+        let photo = "https://image.freepik.com/vector-gratis/perfil-avatar-mujer-icono-redondo_24640-14042.jpg"
+        let profile = document.createElement("div")
+        profile.className = "profileUser"
+        let profilePhoto = document.createElement("div")
+        profilePhoto.className ="photoUser"
+        profilePhoto.innerHTML = `<img id="photoPU" src=${photo}><img>`
+        let profileName = document.createElement("div")
+        profileName.className ="name"
+        profileName.innerHTML= `<h3>${userName}</h3>`
+        const ViewPointsBtn= document.createElement("div");
+        ViewPointsBtn.className="viewPoints"
+        let btnPoints = document.createElement("button")
+        btnPoints.innerHTML= "ver mis puntos"
+        btnPoints.className="btnModalPoints"
+        ViewPointsBtn.appendChild(btnPoints)
+        profile.appendChild(profilePhoto)
+        profile.appendChild(profileName)
+        profile.appendChild(ViewPointsBtn)
+        
+        
+
+        btnPoints.addEventListener('click', ()=>{
+            let modalViewPoints = document.createElement("div")
+            modalViewPoints.className= "modalClub"
+            let clubMessage = document.createElement("div")
+            clubMessage.innerHTML= `<h5>¡Hola ${userName}!</h5>` + `<h6>Sci-fi te recuerda tus beneficios</h6>` + `<p>Porque queremos a nuestros <em>Fanaticos del cine</em>, ¡puedes canjear puntos por una entrada al cine!</p>`
+            let points = document.createElement("div")
+            points.className="pointsContent"
+            points.innerHTML= "<p><strong>haz visto: 20 peliculas este mes</strong></p>" + `<p>puedes canjear tus puntos por una entrada al cine. ***valido solo para funciones normales</p><p>Si ves 10 peliculas más puedes canjear tus puntos por una entrada a un estreno</p>`
+            let btnPointsContent = document.createElement("div")
+            btnPointsContent.className="btnPointsCont"
+            let btnExitPoints = document.createElement("button")
+            btnExitPoints.className="exitPoints"
+            btnExitPoints.innerHTML= "X"
+            btnPointsContent.appendChild(btnExitPoints)
+            modalViewPoints.appendChild(btnPointsContent)
+            modalViewPoints.appendChild(clubMessage)
+            modalViewPoints.appendChild(points)
+            profile.appendChild(modalViewPoints)
+
+            btnExitPoints.addEventListener('click',()=>{
+                modalViewPoints.style.display="none"
+            })
+            
+            sessionSci.appendChild(profile).innerHTML;
+
+        })
+        console.log(sendBtnUser)
+        console.log(userName)
+        sessionSci.appendChild(profile).innerHTML;
+    })
+
 /******** DATA DEL COMIENZO ********/ 
 
 const dataMovies = window.movies;
