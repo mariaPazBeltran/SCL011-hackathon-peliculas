@@ -18,6 +18,11 @@ const sessionSci = document.getElementById("userSession");
         let photo = "https://image.freepik.com/vector-gratis/perfil-avatar-mujer-icono-redondo_24640-14042.jpg"
         let profile = document.createElement("div")
         profile.className = "profileUser"
+        let closesession = document.createElement("div");
+        closesession.className = "closeContent"
+        let buttonClose = document.createElement("button");
+        buttonClose.className = "btnClose"
+        buttonClose.innerHTML = "X"
         let profilePhoto = document.createElement("div")
         profilePhoto.className ="photoUser"
         profilePhoto.innerHTML = `<img id="photoPU" src=${photo}><img>`
@@ -27,23 +32,28 @@ const sessionSci = document.getElementById("userSession");
         const ViewPointsBtn= document.createElement("div");
         ViewPointsBtn.className="viewPoints"
         let btnPoints = document.createElement("button")
-        btnPoints.innerHTML= "ver mis puntos"
+        btnPoints.innerHTML= "Ver mis puntos"
         btnPoints.className="btnModalPoints"
         ViewPointsBtn.appendChild(btnPoints)
+        closesession.appendChild(buttonClose)
+        profile.appendChild(closesession)
         profile.appendChild(profilePhoto)
         profile.appendChild(profileName)
         profile.appendChild(ViewPointsBtn)
         
+        buttonClose.addEventListener("click", ()=>{
+            profile.style.display = "none";
+        })
         
 
         btnPoints.addEventListener('click', ()=>{
             let modalViewPoints = document.createElement("div")
             modalViewPoints.className= "modalClub"
             let clubMessage = document.createElement("div")
-            clubMessage.innerHTML= `<h5>¡Hola ${userName}!</h5>` + `<h6>Sci-fi te recuerda tus beneficios</h6>` + `<p>Porque queremos a nuestros <em>Fanaticos del cine</em>, ¡puedes canjear puntos por una entrada al cine!</p>`
+            clubMessage.innerHTML= `<h5>¡Hola ${userName}!</h5>` + `<h6>SCI-FI te recuerda tus beneficios</h6>` + `<p>Porque queremos a nuestros <em>fanáticos del cine</em>, ¡Puedes canjear puntos por una entrada al cine!</p>`
             let points = document.createElement("div")
             points.className="pointsContent"
-            points.innerHTML= "<p><strong>Haz visto: 20 peliculas este mes</strong></p>" + `<p>puedes canjear tus puntos por una entrada al cine. ***valido solo para funciones normales</p><p>Si ves 10 peliculas más puedes canjear tus puntos por una entrada a un estreno</p>`
+            points.innerHTML= "<p><strong>Haz visto 20 películas este mes</strong></p>" + `<p>Puedes canjear tus puntos por una entrada al cine.</p> <p>Si ves 10 películas más puedes canjear tus puntos por una entrada a un estreno.</p> <p>***valido solo para funciones normales.</p>`
             let btnPointsContent = document.createElement("div")
             btnPointsContent.className="btnPointsCont"
             let btnExitPoints = document.createElement("button")

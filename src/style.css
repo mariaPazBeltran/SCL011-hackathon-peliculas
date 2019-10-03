@@ -79,6 +79,20 @@ label{
     width: 30%;
 }
 
+.closeContent{
+    align-self: flex-end;
+    margin: 50px 50px 0 0;
+}
+
+.btnClose{
+    background: none;
+    border:none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .profileUser{
     position: fixed;
     left: 0;
@@ -92,8 +106,10 @@ label{
     flex-direction: column;
     align-items: center;
 }
+
 #photoPU{
     border: none;
+    border-radius: 20px;
     width: 300px;
     height: 300px;
     margin: 100px 0 0 0;
@@ -121,6 +137,10 @@ label{
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
 }
 
+.btnModalPoints:hover{
+    background-color: #361F56;
+}
+
 .modalClub{
     background-color:white;
     width: 50%;
@@ -135,12 +155,12 @@ label{
 }
 
 .modalClub h5{
-    color: #583688;
+    color: #2D5B91;
     font-size: 24px;
     margin: 10px;
 }
 .modalClub h6{
-    color: #583688;
+    color: #361F56;
     font-size: 18px;
     margin: 10px;
 }
