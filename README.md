@@ -1,8 +1,17 @@
+## Merge Movie
 ### Descripción
 
-CSI FI es un buscador de películas de ciencia ficción donde puedes buscar por los subgéneros de cada cinta y así encontrar nuevos horizontes dentro de tu género favorito.
+Merge Movie es un buscador de películas en donde puedes comparar los títulos similares en cientos de películas de todo el mundo.
 
-Enfocado principalmente en mujeres cinéfilas que buscan conocer datos de sus películas favoritas, CSI FI otorga una grata experiencia de simplicidad y entretención.
+Enfocado principalmente en mujeres cinéfilas que buscan conocer datos de sus películas favoritas, Merge Movie otorga una grata experiencia de simplicidad y entretención.
+
+> ¿Sabías que en el 2000 se hizo un cortometraje que mezcla a Matrix con Sex and the City?
+>  O tal vez que en Rusia se hizo a primera película de volver al futuro donde dos personas comunes viajan a 1570 para ver al Zar de Rusia?
+>  
+Esta y muchas otras curiosidades puedes encontrar en Merge Movie!
+
+También tienes tu propio usuario y puedes ganar premios diariamente!
+
 ### Definición de usuario
 
 Para definir nuestro usuario entrevistamos a 40 personas de un rango etario entre los 20 a 55 años, de distintos sectores y sus respuestas fueron las siguientes:
@@ -25,7 +34,8 @@ Para definir nuestro usuario entrevistamos a 40 personas de un rango etario entr
 
 Mujer de 20 a 30 años, que ve películas regularmente en Netflix, cine u otra plataforma de internet donde prefiere los géneros de ciencia ficción y comedia.
 
-Utiliza paginas para conocer la información de sus películas favoritas, las que busca regularmente por título de la cinta o su género. Su película favorita es Star Wars y busca que la página de películas muestre el poster de la cinta, la información sea fácil de ver y que sea una página simple. También le gustaría poder acceder a premios dentro de la plataforma y que ésta pueda sugerirle otras películas en función a lo que ya ha buscado en la página.  
+Utiliza paginas para conocer la información de sus películas favoritas, las que busca regularmente por título de la cinta o su género. Su película favorita es Star Wars y busca que la página de películas muestre el poster de la cinta, la información sea fácil de ver y que sea una página simple. También le gustaría poder acceder a premios dentro de la plataforma y que ésta pueda sugerirle otras películas en función a lo que ya ha buscado en la página. 
+ 
 ### Historias de Usuario
   
 
@@ -47,22 +57,27 @@ Mostramos en un modal información relacionada con la película, como el directo
 
  - [ ]  Historia de usuario :
 
-“Yo como usuario quiero poder buscar por género mi película favorita”
+“Yo como usuario quiero poder buscar por nombre mi película favorita”
 
 ➡ Criterios de aceptación:
 
-Creamos un select que filtre por genero las películas.
+Creamos un input que filtre por nombre las películas.
 
-### Test de usabilidad
-Creamos un prototipo basado en las sugerencias de los posibles usuarios den la encuesta, dando como resultado
-![figma1](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/figma%201.JPG?raw=true)
-![figma2](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/figma%202.JPG?raw=true)
+ - [ ]  Historia de usuario :
 
-### Feedback
+“Yo como usuario quiero tener mi usuario y tener recomendaciones de las películas que he visto”
 
-### Descripción técnica
+➡ Criterios de aceptación:
 
-### CSI FI
+Creamos una sesión de usuario.
+
+ - [ ]  Historia de usuario :
+
+“Yo como usuario quiero tener premios"
+➡ Criterios de aceptación:
+
+Creamos una ruleta de premios en base de puntos por ver películas.
+
 ### Equipo
  - Natalia Barriga
  - María Paz Beltrán
