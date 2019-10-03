@@ -1,91 +1,70 @@
-# "Hackathon" de final de _Common Core_, películas
+### Descripción
 
- ## Índice
+CSI FI es un buscador de películas de ciencia ficción donde puedes buscar por los subgéneros de cada cinta y así encontrar nuevos horizontes dentro de tu género favorito.
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+Enfocado principalmente en mujeres cinéfilas que buscan conocer datos de sus películas favoritas, CSI FI otorga una grata experiencia de simplicidad y entretención.
+### Definición de usuario
 
- ***
+Para definir nuestro usuario entrevistamos a 40 personas de un rango etario entre los 20 a 55 años, de distintos sectores y sus respuestas fueron las siguientes:
 
- ## **Preámbulo**
+![Edad](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/edad.JPG?raw=true)
 
- Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Hulu, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
+![sexo](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/sexo.JPG?raw=true)
 
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+![enter image description here](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/peli%20mensual.JPG?raw=true)
 
- ## **Resumen del proyecto**
+![Plataforma de visualización de peliculas](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/plataforma.JPG?raw=true)
 
- Durante estos días crearás el producto que tú quieras alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieras!
+![app](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/app.JPG?raw=true)
 
- ## **Consideraciones generales**
+![enter image description here](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/buscas%20por.JPG?raw=true)
 
- * Este proyecto se debe resolver en equipos de hasta 5 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
+![enter image description here](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/peli%20fav.JPG?raw=true)
 
+### Usuario
 
- ## **Objetivos de aprendizaje**
+Mujer de 20 a 30 años, que ve películas regularmente en Netflix, cine u otra plataforma de internet donde prefiere los géneros de ciencia ficción y comedia.
 
- * Enfrentarte a un reto de corta duración en el que pongas en práctica todo
-lo aprendido hasta ahora.
-* Que sigas desarrollando tus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+Utiliza paginas para conocer la información de sus películas favoritas, las que busca regularmente por título de la cinta o su género. Su película favorita es Star Wars y busca que la página de películas muestre el poster de la cinta, la información sea fácil de ver y que sea una página simple. También le gustaría poder acceder a premios dentro de la plataforma y que ésta pueda sugerirle otras películas en función a lo que ya ha buscado en la página.  
+### Historias de Usuario
+  
 
- ## **Parte Obligatoria**
+ - [ ]  Historia de usuario :
 
- * Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
-y las inspiraciones utilizadas para definir el producto.
-* Además, deberás detallar en el archivo _readme_, qué hizo cada una en el
-proyecto.
-* El producto deberá presentarse publicado en github pages.
+“Yo como usuario quiero ver los posters de las películas que tiene la página”
 
- ## **Consideraciones técnicas**
+➡ Criterios de aceptación:
 
- * El diseño visual de los componentes es de libre elección de las estudiantes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Deberán usar al menos un framework de css.
+Mostramos la data en la pantalla principal.
 
+ - [ ]  Historia de usuario :
 
-## **Horario**
+“Yo como usuario quiero saber datos de la película”
 
-|       |   Martes           |  Miércoles         |   Jueves                   |
-|------ | -------------------| ------------------ | -------------------------- |
-| 8:00  |  Kick off hackaton |  Daily por squad   |  Daily por squad           |
-| 9:00  |  Sesión de planificación|  Hackeo       |  Hackeo/Detalles finales/ Inscripción de aplicaciones            
-| 10:00 |  Hackeo|          |                     |Feria de demostraciones     |
-| 11:00 |                   |                     |Presentación de mejores squads|           
-| 12:00 |                   |                     |Deliberación del jurado     |
-|>13:00 |                   |                     |                            |
-| 20:00 |                   |                     |                            |
+➡ Criterios de aceptación:
 
-## **Tips para la organización de trabajo entre UX y Front end**
+Mostramos en un modal información relacionada con la película, como el director o las nominaciones a premios.
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo y a crear componentes atómicos que luego les sea fácil personalizar con CSS y utilizar para crear interfaces más complejas. Además, las FE empiezan también a trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Planifiquen, historias de usuario y definition of done son importantísimos.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
+ - [ ]  Historia de usuario :
 
-## **¿Qué es la Feria de demos?**
+“Yo como usuario quiero poder buscar por género mi película favorita”
 
-La feria de demos se realizará el día de las presentaciones, consiste en la dinámica de “speed dating”, cada squad presentará su demo durante 3 minutos a un grupo de personas, entre ellos los jurados de la Hackathon. Luego de los 3 minutos sonará una chicharra y el grupo de personas rotará al siguiente squad, de esta forma deberán presentar durante una hora. 
+➡ Criterios de aceptación:
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías usadas.
-* Los asistentes van a votar por los 3 equipos finalistas, quienes tendrán la oportunidad de hacer su demo a todo el público para poder elegir un ganador. 
+Creamos un select que filtre por genero las películas.
+
+### Test de usabilidad
+Creamos un prototipo basado en las sugerencias de los posibles usuarios den la encuesta, dando como resultado
+![figma1](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/figma%201.JPG?raw=true)
+![figma2](https://github.com/RominaGarrido/SCL011-hackathon-peliculas/blob/master/encuesta/figma%202.JPG?raw=true)
+
+### Feedback
+
+### Descripción técnica
+
+### CSI FI
+### Equipo
+ - Natalia Barriga
+ - María Paz Beltrán
+ - Romina Garrido
+ - Paola Huenuman

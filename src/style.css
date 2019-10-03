@@ -9,9 +9,8 @@ body {
     font-size: 16px;
     background-image: linear-gradient(to right top, #3a2f4f, #3e3a61, #3e4573, #3a5286, #2e5f99);
 }
-
+/* Caja que contiene todo*/
 #root{
-    border: 1px solid black;
     width: 100%;
     height: auto;
     margin: 0;
@@ -21,6 +20,7 @@ body {
     background-image: linear-gradient(to right top, #3a2f4f, #3e3a61, #3e4573, #3a5286, #2e5f99);
 }
 
+/* Lo que esta en el header */
 nav {
     height: 150px;
     width: 100%;
@@ -35,6 +35,7 @@ nav h1{
     color: white;
 }
 
+/* Lo que esta en el section*/
 .menu{
     height: 50px;
     width: 100%;
@@ -44,9 +45,11 @@ nav h1{
     justify-content: space-around;
     align-items: center;
 }
-
-.selectBox{
+/* Selector */
+/* .selectBox{
     width:40%;
+    display: flex;
+    justify-content: center;
 }
 
 .selector{
@@ -62,25 +65,33 @@ select {
     background-color: white;
     background-image: none;
     appearance: none;
-}
+} */
 
-.seeker{
-    width: 140%;
-    height: 50px;
-    float:right;
+/* Buscador*/
+.containerSearch{
+    width: 30%;
+    height: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 }
-
-#busqueda{
-    width: 70%;
-    background-color: #fff;
+.searchBox{
+    width: 60%;
+    height: 25px;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
 }
-
+.searchBox input#search{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    font-size: 10pt;
+    color:#361F56;
+}
 .searchBtn{
     width: 20%;
+    margin: 0 0 0 30px;
     padding: 5px;
     background-color: #583688;
     border: none;
@@ -89,28 +100,30 @@ select {
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
 }
 
+/* Caja que contiene las cartas*/
 #showCards{
     width: 90%;
     margin: 5%;
     display:flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
-/*Estilo de la tarjeta*/
+
+/* Tarjeta */
 .cardsMovies{
     background-color:white;
     width: 15%;
-    height: 350px;
+    height: 380px;
     margin: 0 0 3% 0;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/*Estilo de la imagen*/
 .posterMovie{
     width: 100%;
     height: 250px;
@@ -120,9 +133,10 @@ h2{
     font-size: 16px;
     color:#583688;
 }
-
-.buttonModal{
+/* Botones tarjeta */
+.buttonModal, .buttonWatch{
     width: 50%;
+    height: 25px;
     color: white;
     padding: 5px;
     background-color: #583688;
@@ -130,72 +144,33 @@ h2{
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
     cursor: pointer;
+    display: block;
 }
-
-.buttonModal:hover{
+.buttonWatch{
     background-color: #E8BA28;
+    margin: 10px 0 0 0;
+}
+.buttonModal:hover{
+    background-color: #361F56;
+}
+.buttonWatch:hover{
+    background-color: rgb(255, 210, 62);
 }
 
-/* Estilo Modal*/
-/* .modalCardsView{
-    background-color: #583688;
-    width: 20%;
-    margin: 47px 0 0 -65px;
-    padding: 30px 20px;
-    color: white;
-    position: absolute;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.infoContent{
-    text-align: left;
-}
-
-.infoContent h2{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
-.infoContent p{
-    color: white;
-    font-size: 14px;
-    font-weight: 200;
-}
-
-.contentBtn{
-    width:20px;
-    display: flex;
-    justify-content: center;
-}
-
-.btnExit{
-   background: none;
-   border:none;
-   color: white;
-   font-size: 16px;
-} */
-
-
-/* Estilo Modal*/
+/* Modal */
 
 .modalContainer{
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8); 
 }
-
- .modalCardsView{
+.modalCardsView{
     width: 60%;
     margin: 0 0 0 16%;
     padding: 30px 50px;
@@ -206,53 +181,114 @@ h2{
     border-radius: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: #583688;
-    color: white;
+    background-color: white;
     display: flex;
-    flex-direction: column-reverse;
-   align-items: center;
+    flex-direction: row;
 } 
 .infoContent{
-    width: 90%;
-    text-align: left;
-}
 
+    width: 50%;
+    text-align: left;
+    margin: 0 0 0 40px;
+}
 .infoContent h2{
-    color: white;
+    color: #2D5B91;
     font-size: 30px;
     text-align: center;
 }
-
 .infoContent p{
-    color: white;
+    color: #2D5B91;
     font-size: 14px;
-    font-weight: 300;
 }
-
 .contentBtn{
-    width:20px;
+    width: 100px;
+    height: 30px;
     display: flex;
-    justify-content: center;
-    align-self: flex-end;
+    justify-content: flex-end;
 }
-
 .btnExit{
    background: none;
    border:none;
-   color: white;
+   color: #2D5B91;
    font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
 }
 .btnWatchNow{
-
-    width: 20%;
+    width: 30%;
+    height: 40px;
     color: white;
     font-weight: 900;
     font-size: 15px;
+    text-align: center;
     margin: 20px 0 0 0;
     padding: 10px;
     background-color: #E8BA28;
     border:none;
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
-    order: -1;
+    cursor: pointer;
+} 
+
+.btnWatchNow:hover{
+    background-color:  rgb(255, 210, 62);
+}
+.posterModal{
+    width: 30%;
+    height: 100%;
+}
+.footer {
+    position: absolute;
+    margin: 0;
+    height: 3%;
+    width: 90%;
+    padding: 5% 5% 0 5%;
+    background-color:rgb(26, 14, 43);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer p{
+    font-size: 12px;
+    color: rgba(245, 243, 247, 0.507);
+}
+
+
+/* Responsive */
+/* Para tablets */
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+    #root{
+    width:100%;
+    margin: 0px;
+}
+    #main{
+    height: 80px;
+ }
+ #showCards{
+    width:100%;
+    margin: 0px;
+}
+#nav{
+    width: 70%;
+ margin-left:20%;
+}
+}
+/*Para celular*/
+@media only screen and (max-width: 640px){
+    #showCards{
+      margin: 0px;
+      width:100%;
+}
+#nav{
+  text-align: center;
+  width: 100%;
+  margin-left: 5%
+}
+#main{
+  margin:2px;
+  flex-flow: wrap;
+  text-align: center;
+  height: 80px; 
+  
+}
 }

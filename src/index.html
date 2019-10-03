@@ -11,44 +11,31 @@
 <body>
     <div id="root">
     <header>
-        <nav><h1>SCI FI</h1></nav>
+        <nav><h1>SCI-FI</h1></nav>
     </header>
 
     <main>
         <section class="menu">
-            <div class="selectBox">
-                <select name="" id="gender" class="selector">
-                    <option value="" selected >seleccion1</option>
-                    <option value="Short"></option>
-                    <option value="Action"></option>
-                    <option value="Drama"></option>
-                    <option value="Sci-Fi"></option>
-                    <option value="Adventure"></option>
-                    <option value="Triller"></option>
-                    <option value="Fantasy"></option>
-                </select>
-                
-                <select name="" id="" class="selector">
-                    <option value="">seleccion2</option>
-                </select>
-
-                <select name="" id="" class="selector">
-                    <option value="">seleccion2</option>
-                </select> 
-            </div>
-            <form>
-                <div class="seeker">
-                    <input type="search" id="busqueda">
-                    <button class="searchBtn">Buscar</button>
+            <div class="containerSearch">
+                <div class="searchBox">
+                    <input type="search" id="search" placeholder="Buscar..." />
                 </div>
-            </form>
+                <button class="searchBtn" id="searchBtn">Buscar</button>
+            </div>
         </section>
     </main>
 
     <div id="showCards"></div>
+
 </div>
+<div class="footer">
+    <p>Desarrollado por: Natalia Barriga, María Paz Beltrán, Romina Garrido y Paola Huenuman.</p>
+    <p>Laboratoria - Chile</p>
+  </div>
+
     <script src="movies.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
+
