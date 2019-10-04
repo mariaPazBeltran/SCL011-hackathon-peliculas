@@ -1,0 +1,424 @@
+/* border: 1px solid black; */
+body {
+    margin:0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-image: linear-gradient(to right top, #3a2f4f, #3e3a61, #3e4573, #3a5286, #2e5f99);
+}
+/* Caja que contiene todo*/
+#root{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #3a2f4f, #3e3a61, #3e4573, #3a5286, #2e5f99);
+}
+
+/* Lo que esta en el header */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+nav {
+    height: 150px;
+    width: 100%;
+    background-color: transparent;
+    margin:0;
+}
+
+nav h1{
+    font-family: 'orbitron';
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+/*** Usuario ***/
+#club-Sci{
+    width: 30%;
+    height: 100px;
+    padding: 0 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 30px;
+}
+
+label{
+    color: white;
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+
+#sendNick{
+    width: 20%;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    background-color: #583688;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+}
+#sendNick:hover{
+    background-color:  #361F56;
+}
+
+#nickName{
+    width: 30%;
+}
+
+.closeContent{
+    align-self: flex-end;
+    margin: 50px 50px 0 0;
+}
+
+.btnClose{
+    background: none;
+    border:none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profileUser{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photoPU{
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 10px 0 0 0;
+}
+
+.name{
+    border: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btnModalPoints{
+    border: none;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    background-color: #583688;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+}
+
+.btnModalPoints:hover{
+    background-color: #361F56;
+}
+
+.modalClub{
+    background-color:white;
+    width: 50%;
+    height: 280px;
+    margin: 20px 0 0 0;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalClub h5{
+    color: #2D5B91;
+    font-size: 24px;
+    margin: 10px;
+}
+.modalClub h6{
+    color: #361F56;
+    font-size: 18px;
+    margin: 10px;
+}
+.modalClub p{
+    color: #361F56;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.btnPointsCont{
+   align-self: flex-end;
+}
+
+.exitPoints{
+    background: none;
+    border:none;
+    color: #2D5B91;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Lo que esta en el section*/
+.menu{
+    height: 50px;
+    width: 100%;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Buscador*/
+.containerSearch{
+    width: 30%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.searchBox{
+    width: 60%;
+    height: 25px;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+}
+.searchBox input#search{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    font-size: 10pt;
+    color:#361F56;
+}
+.searchBtn{
+    width: 20%;
+    margin: 0 0 0 30px;
+    padding: 5px;
+    background-color: #583688;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+}
+.searchBtn:hover{
+    background-color:  #361F56;
+}
+
+/* Caja que contiene las cartas*/
+#showCards{
+    width: 90%;
+    margin: 5%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+/* Tarjeta */
+.cardsMovies{
+    background-color:white;
+    width: 15%;
+    height: 380px;
+    margin: 0 0 3% 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.posterMovie{
+    width: 100%;
+    height: 250px;
+}
+
+h2{
+    font-size: 16px;
+    color:#583688;
+}
+/* Botones tarjeta */
+.buttonModal, .buttonWatch{
+    width: 50%;
+    height: 25px;
+    color: white;
+    padding: 5px;
+    background-color: #583688;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+    cursor: pointer;
+    display: block;
+}
+.buttonWatch{
+    background-color: #E8BA28;
+    margin: 10px 0 0 0;
+}
+.buttonModal:hover{
+    background-color: #361F56;
+}
+.buttonWatch:hover{
+    background-color: rgb(255, 210, 62);
+}
+
+/* Modal */
+
+.modalContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8); 
+}
+.modalCardsView{
+    width: 60%;
+    margin: 0 0 0 16%;
+    padding: 30px 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    overflow: visible;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+} 
+
+.infoContent{
+    width: 50%;
+    text-align: left;
+    margin: 0 0 0 40px;
+}
+.infoContent h2{
+    color: #2D5B91;
+    font-size: 30px;
+    text-align: center;
+}
+.infoContent p{
+    color: #2D5B91;
+    font-size: 14px;
+}
+.contentBtn{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btnExit{
+   background: none;
+   border:none;
+   color: #2D5B91;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+}
+.btnWatchNow{
+    width: 30%;
+    height: 40px;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    background-color: #E8BA28;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+    cursor: pointer;
+} 
+
+.btnWatchNow:hover{
+    background-color:  rgb(255, 210, 62);
+}
+.posterModal{
+    width: 30%;
+    height: 100%;
+}
+.footer {
+    position: static;
+    margin: 0;
+    height: 120px;
+    width: 90%;
+    padding: 5% 5% 0 5%;
+    background-color:rgb(26, 14, 43);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer p{
+    font-size: 12px;
+    color: rgba(245, 243, 247, 0.507);
+}
+
+
+
+
+/* Responsive */
+/* Para tablets */
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+    #root{
+    width:100%;
+    margin: 0px;
+}
+    #main{
+    height: 80px;
+ }
+ #showCards{
+    width:100%;
+    margin: 0px;
+}
+#nav{
+    width: 70%;
+ margin-left:20%;
+}
+}
+/*Para celular*/
+@media only screen and (max-width: 640px){
+    #showCards{
+      margin: 0px;
+      width:100%;
+}
+#nav{
+  text-align: center;
+  width: 100%;
+  margin-left: 5%
+}
+#main{
+  margin:2px;
+  flex-flow: wrap;
+  text-align: center;
+  height: 80px; 
+  
+}
+}
